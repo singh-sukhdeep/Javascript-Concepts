@@ -20,28 +20,28 @@ const userInfo = {
 
 // Shallow Copy
 
-let shallowCopy = Object.assign({}, userInfo);
+// let shallowCopy = Object.assign({}, userInfo);
 
-shallowCopy.age = 35;
-shallowCopy.coutriesLived[2] = "INDIA";
+// shallowCopy.age = 35;
+// shallowCopy.coutriesLived[2] = "INDIA";
 
-console.log('Shallow Copy Object -->', shallowCopy);
-console.log('User Info Object -->', userInfo);
+// console.log('Shallow Copy Object -->', shallowCopy);
+// console.log('User Info Object -->', userInfo);
 
-console.log('Check if both object have same refrence', Object.is(userInfo, shallowCopy));
+// console.log('Check if both object have same refrence', Object.is(userInfo, shallowCopy));
 
 
 
 // Deep Copy
 
-// let deepCopy = JSON.parse(JSON.stringify(userInfo));
+let deepCopy = JSON.parse(JSON.stringify(userInfo));
 
-// deepCopy.age = 35
-// deepCopy.coutriesLived[2] = "INDIA";
+deepCopy.age = 35
+deepCopy.coutriesLived[2] = "INDIA";
 
 
-// console.log('Deep Copy Object -->', deepCopy);
-// console.log('User Info Object -->', userInfo);
+console.log('Deep Copy Object -->', deepCopy);
+console.log('User Info Object -->', userInfo);
 
-// console.log('Check if both object have same refrence', Object.is(userInfo, deepCopy));
+console.log('Check if both object have same refrence', Object.is(userInfo, deepCopy));
 
